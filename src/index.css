@@ -2,10 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark {
-  background-color: #252128;
-}
-
 .light {
-  background-color: #fff;
+  --bodyBackgroundColor: #ffffff;
+  --footerBackgroundColor: #f9f9f9;
+  --themeTextColor: #777777;
+  --languageSpanColor: #4731d3;
+  --languageTextColor: #ffffff;
+  --buttonColor: #3730a3;
+  --buttonHoverTextColor: #ffffff;
+  --heroHeadersColor: #1f2937;
+  --headersColor: #4338ca;
+  --profileTextColor: #000000;
+  --paragraphsColor: #6b7280;
+  --projectsHeaderColor: #4338ca;
+  --projectsButtonBackgroundColor: #ffffff;
+  --projectsButtonBorderColor: #3730a3;
+  --projectsButtonColor: #3730a3;
+  --projectsLinksColor: #3730a3;
+  --emailColor: #af0c48;
+  --footerPersonalColor: #0a0a14;
+  --footerGithubColor: #00ab6b;
+  --footerLinkedinColor: #0077b5;
+}
+.dark {
+  --bodyBackgroundColor: #252128;
+  --footerBackgroundColor: #141414;
+  --themeTextColor: #d9d9d9;
+  --languageSpanColor: #bab2e7;
+  --languageTextColor: #383838;
+  --buttonColor: #e1e1ff;
+  --buttonHoverTextColor: #000000;
+  --heroHeadersColor: #aebccf;
+  --headersColor: #b7aaff;
+  --profileTextColor: #ffffff;
+  --paragraphsColor: #ffffff;
+  --projectsHeaderColor: #cfcbff;
+  --projectsButtonBackgroundColor: #383838;
+  --projectsButtonBorderColor: #8f88ff;
+  --projectsButtonColor: #8f88ff;
+  --projectsLinksColor: #e1e1ff;
+  --emailColor: #bab2e7;
+  --footerPersonalColor: #e1e1ff;
+  --footerGithubColor: #17d18b;
+  --footerLinkedinColor: #0ba6f6;
 }

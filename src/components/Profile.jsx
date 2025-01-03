@@ -1,88 +1,42 @@
-import data from "../data.js";
-import { useContext } from "react";
-import { LanguageContext } from "../context/LanguageContext.jsx";
-import { ThemeContext } from "../context/ThemeContext.jsx";
-
+import React, { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
+import data from "../data";
 function Profile() {
-  const { theme, handleThemeChange } = useContext(ThemeContext);
-  const { language, handleLanguageChange } = useContext(LanguageContext);
-
+  const { language } = useContext(LanguageContext);
   return (
-    <div
-      style={{
-        backgroundColor: theme === "dark" ? "#252128" : "#ffffff",
-      }}
-      class="flex flex-col pl-36 pr-40"
-    >
-      <div class="flex ">
-        <h2
-          style={{ color: theme === "dark" ? "#AEBCCF" : "#1F2937" }}
-          class="desktop:text-5xl font-Inter font-semibold pb-6"
-        >
-          {data[language].profile.header}
-        </h2>
-      </div>
-      <div class="flex gap-20 pb-16 border-b border-light-purple">
-        <div class="flex flex-col">
-          <div>
-            <h3
-              style={{ color: theme === "dark" ? "#B7AAFF" : "#4338CA" }}
-              class="font-Inter desktop:text-3xl font-medium pb-6"
-            >
-              {data[language].profile.header}
-            </h3>
-          </div>
-          <div class="flex gap-20">
-            <div class="flex flex-col gap-2.5 font-Inter font-semibold text-black text-lg w-40 h-44">
-              {data[language].profile.infoArray.map((item, index) => {
-                return (
-                  <p
-                    style={{ color: theme === "dark" ? "#FFFFFF" : "#000000" }}
-                    key={index}
-                  >
-                    {item.title}
-                  </p>
-                );
-              })}
-            </div>
-            <div class="flex flex-col gap-2.5 font-Inter font-normal text-black text-lg w-60 h-44">
-              {data[language].profile.infoArray.map((item, index) => {
-                return (
-                  <p
-                    style={{ color: theme === "dark" ? "#FFFFFF" : "#000000" }}
-                    key={index}
-                  >
-                    {item.value}
-                  </p>
-                );
-              })}
-            </div>
-          </div>
+    <div className="flex flex-col gap-10 items-start phone:items-center phone:w-[400px] tablet:w-[500px] desktop:w-5/6">
+      <h2 className="phone:w-[350px] text-heroHeadersColor font-semibold phone:text-3xl tablet:text-4xl desktop:text-5xl">
+        {data[language].profile.header}
+      </h2>
+      <div className="flex desktop:gap-32 phone:gap-10 phone:w-[350px] phone:flex-col pb-16 border-light-purple border-b">
+        <div className="flex flex-col gap-5 desktop:w-1/3">
+          <h3 className="text-2xl text-headersColor font-medium">
+            {data[language].profile.header}
+          </h3>
+          {data[language].profile.infoArray.map((info, index) => {
+            return (
+              <div className="flex justify-between" key={index}>
+                <p className="text-profileTextColor font-semibold phone:w-[120px] desktop:w-[300px]">
+                  {info.title}:
+                </p>
+                <p className="text-profileTextColor text-left phone:w-[220px] desktop:w-[400px] ">
+                  {info.value}
+                </p>
+              </div>
+            );
+          })}
         </div>
-        <div class="w-2/4 h-44">
-          <h3
-            style={{ color: theme === "dark" ? "#B7AAFF" : "#4338CA" }}
-            class="font-Inter text-3xl text-middle-blue font-medium pb-6"
-          >
+        <div className="flex flex-col gap-5 desktop:w-[500px]">
+          <h3 className="text-2xl text-headersColor font-medium">
             {data[language].profile.aboutMe}
           </h3>
-          <p
-            style={{ color: theme === "dark" ? "#ffffff" : "#6B7280" }}
-            class="font-Inter text-lg text-br-grey font-normal pb-6"
-          >
-            {data[language].profile.aboutMeDesc1}
-          </p>
-
-          <p
-            style={{ color: theme === "dark" ? "#ffffff" : "#6B7280" }}
-            class="font-Inter text-lg text-br-grey font-normal pb-6"
-          >
-            {data[language].profile.aboutMeDesc2}
+          <p className="text-paragraphsColor break-words desktop:w-[500px]">
+            {data[language].profile.aboutMeDescOne} <br /> <br />
+            {data[language].profile.aboutMeDescTwo}
           </p>
         </div>
       </div>
     </div>
   );
 }
-
 export default Profile;

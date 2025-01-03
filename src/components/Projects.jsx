@@ -8,17 +8,9 @@ function Projects() {
   const { language, handleLanguageChange } = useContext(LanguageContext);
 
   return (
-    <div
-      style={{
-        backgroundColor: theme === "dark" ? "#252128" : "#ffffff",
-      }}
-      class="flex flex-col py-16 pr-32 pl-36"
-    >
+    <div class="flex flex-col py-16 pr-32 pl-36">
       <div>
-        <h2
-          style={{ color: theme === "dark" ? "#AEBCCF" : "#1F2937" }}
-          class="text-5xl font-Inter font-semibold pb-6"
-        >
+        <h2 class="text-5xl text-heroHeadersColor font-Inter font-semibold pb-6">
           Projects
         </h2>
       </div>
@@ -27,31 +19,17 @@ function Projects() {
           return (
             <div key={index} class="flex flex-col gap-5">
               <img src={item.image} />
-              <h3
-                style={{ color: theme === "dark" ? "#CFCBFF" : "#4338CA" }}
-                class="font-Inter font-medium text-3xl"
-              >
+              <h3 class="font-Inter font-medium text-3xl text-projectsHeaderColor">
                 {item.title}
               </h3>
-              <p
-                style={{
-                  color: theme === "dark" ? "#FFFFFF" : "#6B7280",
-                }}
-                class="font-Inter font-normal text-sm"
-              >
+              <p class="font-Inter font-normal text-sm text-paragraphsColor">
                 {item.desc}
               </p>
               <div class="flex gap-1.5">
                 {item.toolsArray.map((item, index) => {
                   return (
                     <p
-                      style={{
-                        color: theme === "dark" ? "#8F88FF" : "#3730A3",
-                        backgroundcolor:
-                          theme === "dark" ? "#383838" : "#FFFFFF",
-                        bordercolor: theme === "dark" ? "#8F88FF" : "#3730A3",
-                      }}
-                      class="border rounded py-1.5 px-5 font-Inter font-medium text-sm "
+                      class="border rounded py-1.5 px-5 font-Inter font-medium text-sm text-projectsButtonBorderColor bg-languageTextColor border-projectsButtonBorderColor"
                       key={index}
                     >
                       {item}
@@ -59,12 +37,7 @@ function Projects() {
                   );
                 })}
               </div>
-              <div
-                style={{
-                  color: theme === "dark" ? "#E1E1FF" : "#3730A3",
-                }}
-                class="flex justify-between underline font-Inter font-medium text-base"
-              >
+              <div class="flex justify-between underline font-Inter font-medium text-base text-buttonColor">
                 <a href={item.githubLink}>{item.github}</a>
                 <a href={item.viewLink}>{item.view}</a>
               </div>

@@ -9,38 +9,20 @@ function Footer() {
   const { language, handleLanguageChange } = useContext(LanguageContext);
 
   return (
-    <div
-      style={{
-        backgroundColor: theme === "dark" ? "#141414" : "#F9F9F9",
-      }}
-      class="flex flex-col w-full h-96 py-16 pl-32 gap-14"
-    >
+    <div class="flex flex-col w-full h-96 py-16 pl-32 gap-14 bg-footerBackgroundColor">
       <div>
-        <p
-          style={{ color: theme === "dark" ? "#AEBCCF" : "#1F2937" }}
-          class="font-Inter text-5xl font-semibold"
-        >
+        <p class="font-Inter text-5xl font-semibold text-heroHeadersColor">
           {data[language].footer.header1}
         </p>
-        <p
-          style={{ color: theme === "dark" ? "#AEBCCF" : "#1F2937" }}
-          class="font-Inter text-5xl font-semibold"
-        >
+        <p class="font-Inter text-5xl font-semibold text-heroHeadersColor">
           {data[language].footer.header2}
         </p>
       </div>
       <div class="flex justify-between">
         <div class="flex items-center gap-2">
-          <img
-            style={{
-              backgroundColor: theme === "dark" ? "#141414" : "#F9F9F9",
-            }}
-            class="w-5"
-            src={finger}
-          />
+          <img class="w-5 bg-footerBackgroundColor" src={finger} />
           <a
-            style={{ color: theme === "dark" ? "#BAB2E7" : "#AF0C48" }}
-            class="font-Inter font-medium text-xl underline"
+            class="font-Inter font-medium text-xl underline text-emailColor"
             href="smyyekartal@outlook.com"
           >
             {data[language].footer.email}
@@ -48,22 +30,19 @@ function Footer() {
         </div>
         <div class="flex mr-32 gap-5">
           <a
-            style={{ color: theme === "dark" ? "#E1E1FF" : "#0A0A14" }}
-            class="font-Inter font-medium text-lg"
+            class="font-Inter font-medium text-lg text-footerPersonalColor"
             href={data[language].footer.footerLinks[0].link}
           >
             {data[language].footer.footerLinks[0].title}
           </a>
           <a
-            style={{ color: theme === "dark" ? "#17D18B" : "#00AB6B" }}
-            class="font-Inter font-medium text-lg"
+            class="font-Inter font-medium text-lg text-footerGithubColor"
             href={data[language].footer.footerLinks[1].link}
           >
             {data[language].footer.footerLinks[1].title}
           </a>
           <a
-            style={{ color: theme === "dark" ? "#0BA6F6" : "#0077B5" }}
-            class="font-Inter font-medium text-lg"
+            class="font-Inter font-medium text-lg text-footerLinkedinColor"
             href={data[language].footer.footerLinks[2].link}
           >
             {data[language].footer.footerLinks[2].title}

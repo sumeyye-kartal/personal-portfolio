@@ -14,7 +14,7 @@ function App() {
     <div>
       <ThemeProvider>
         <LanguageProvider>
-          <main className="flex flex-col gap-20 items-center justify-center phone:gap-10">
+          <main className="flex flex-col gap-20 items-center justify-center bg-bodyBackgroundColor phone:gap-10">
             <Header />
             <Hero />
             <Skills />

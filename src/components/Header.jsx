@@ -8,12 +8,7 @@ function Header() {
   const { language, handleLanguageChange } = useContext(LanguageContext);
 
   return (
-    <div
-      style={{
-        backgroundColor: theme === "dark" ? "#252128" : "#ffffff",
-      }}
-      class="w-full flex flex-col gap-4 phone:p-2 phone:text-[.6rem] tablet:p-2 tablet:text-[.8rem] desktop:p-4 desktop:w-5/6"
-    >
+    <div class="w-full flex flex-col gap-4 phone:p-2 phone:text-[.6rem] tablet:p-2 tablet:text-[.8rem] desktop:p-4 desktop:w-5/6">
       <div class="flex justify-end phone:gap-2 desktop:gap-4">
         <button onClick={handleThemeChange}>
           <img
@@ -25,27 +20,15 @@ function Header() {
             }
           />
         </button>
-        <p
-          class="font-Inter font-bold text-base"
-          style={{ color: theme === "dark" ? "#D9D9D9" : "#777777" }}
-        >
+        <p class="font-Inter font-bold text-base text-themeTextColor">
           {data[language].header.darkBtn}
         </p>
-        <p
-          class="font-Inter font-bold text-base"
-          style={{ color: theme === "dark" ? "#D9D9D9" : "#777777" }}
-        >
-          |
-        </p>
+        <p class="font-Inter font-bold text-base text-themeTextColor">|</p>
         <button
-          style={{ color: theme === "dark" ? "#D9D9D9" : "#777777" }}
           onClick={handleLanguageChange}
-          class="font-Inter font-bold text-base"
+          class="font-Inter font-bold text-base text-themeTextColor"
         >
-          <span
-            style={{ color: theme === "dark" ? "#BAB2E7" : "#4731D3" }}
-            class="font-Inter font-bold text-base"
-          >
+          <span class="font-Inter font-bold text-base text-languageSpanColor">
             {data[language].header.languageSpan}
           </span>
           {data[language].header.languageBtn}
@@ -62,13 +45,13 @@ function Header() {
             }
           />
         </div>
-        <div class="flex text-lg text-br-grey font-Inter phone:gap-4 tablet:gap-8 desktop:gap-12">
+        <div class="flex text-lg text-paragraphsColor font-Inter phone:gap-4 tablet:gap-8 desktop:gap-12">
           {data[language].header.navArray.map((item, index) => {
             return (
               <a
                 href={item.link}
                 key={index}
-                class="hover:border border border-white phone:rounded-sm phone:p-1 tablet:p-2 tablet:rounded-md desktop:p-3 desktop:rounded-md hover:border-dark-blue hover:border-solid hover:text-dark-blue"
+                class="hover:border border border-white phone:rounded-sm phone:p-1 tablet:p-2 tablet:rounded-md desktop:p-3 desktop:rounded-md hover:border-buttonColor hover:border-solid hover:text-buttonColor"
               >
                 {item.title}
               </a>

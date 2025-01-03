@@ -53,8 +53,8 @@ const LanguagesData = {
     profile: {
         header: "Profil",
         aboutMe: "Hakkımda",
-        aboutMeDesc1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-        aboutMeDesc2: "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+        aboutMeDescOne: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+        aboutMeDescTwo: "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
         infoArray: [
             { title: "Doğum Tarihi", value: "18.04.1992" },
             { title: "İkamet Şehri", value: "İstanbul" },
@@ -151,8 +151,8 @@ const LanguagesData = {
         profile: {
             header: "Profile",
             aboutMe: "About Me",
-            aboutMeDesc1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-            aboutMeDesc2: "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+            aboutMeDescOne: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+        aboutMeDescTwo: "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
             infoArray: [
                 { title: "Date Of Birth", value: "18.04.1992" },
                 { title: "City Of Rezidans", value: "İstanbul" },
