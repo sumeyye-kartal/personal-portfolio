@@ -8,18 +8,18 @@ function Projects() {
   const { language, handleLanguageChange } = useContext(LanguageContext);
 
   return (
-    <div class="flex flex-col py-16 pr-32 pl-36">
+    <div class="flex flex-col gap-10 phone:items-center phone:w-[400px] tablet:w-[500px] desktop:w-5/6 ">
       <div>
-        <h2 class="text-5xl text-heroHeadersColor font-Inter font-semibold pb-6">
+        <h2 class="phone:w-[350px] text-heroHeadersColor font-semibold phone:text-3xl tablet:text-4xl desktop:text-5xl">
           Projects
         </h2>
       </div>
-      <div class="flex gap-32">
+      <div class="flex desktop:gap-32 phone:gap-10 phone:w-[350px] phone:flex-col">
         {data[language].project.projectsArray.map((item, index) => {
           return (
-            <div key={index} class="flex flex-col gap-5">
+            <div key={index} class="flex flex-col gap-5 desktop:w-1/3">
               <img src={item.image} />
-              <h3 class="font-Inter font-medium text-3xl text-projectsHeaderColor">
+              <h3 class="font-Inter font-medium text-2xl text-projectsHeaderColor">
                 {item.title}
               </h3>
               <p class="font-Inter font-normal text-sm text-paragraphsColor">
@@ -29,7 +29,7 @@ function Projects() {
                 {item.toolsArray.map((item, index) => {
                   return (
                     <p
-                      class="border rounded py-1.5 px-5 font-Inter font-medium text-sm text-projectsButtonBorderColor bg-languageTextColor border-projectsButtonBorderColor"
+                      class="border rounded py-1.5 px-5 font-Inter font-medium text-sm text-projectsButtonBorderColor bg-languageTextColor border-projectsButtonBorderColor "
                       key={index}
                     >
                       {item}
