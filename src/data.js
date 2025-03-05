@@ -58,7 +58,7 @@ const LanguagesData = {
         infoArray: [
             { title: "Doğum Tarihi", value: "18.04.1992" },
             { title: "İkamet Şehri", value: "İstanbul" },
-            { title: "Eğitim Durumu", value: "İstanbul Üni. Matematik Lisans, 2022" },
+            { title: "Eğitim Durumu", value: "İstanbul Üni. Matematik Lisans, 2023" },
             { title: "Tercih Ettiği Rol", value: "Frontend, UI"},
         ],
     },
@@ -156,7 +156,7 @@ const LanguagesData = {
             infoArray: [
                 { title: "Date Of Birth", value: "18.04.1992" },
                 { title: "City Of Rezidans", value: "İstanbul" },
-                { title: "Educational Background", value: "İstanbul Üni. Matematik Lisans, 2022" },
+                { title: "Educational Background", value: "İstanbul Üni. Matematik Lisans, 2023" },
                 { title: "Preferred Role", value: "Frontend, UI"},
             ],
         },
